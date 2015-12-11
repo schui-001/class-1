@@ -3,13 +3,19 @@
 #include <stdlib.h>
 class XZ {
 public:
-  virtual void area() const { printf("XZ::area\n"); }
+  virtual void area() const =0;
   void show() {printf("XZ:show()");}
   virtual ~XZ() {
     printf("~XZ()\n");
   }
 
 };
+main{
+  XZ xz;
+  xz.area();
+
+}
+
 class Ract : public XZ {
 protected: 
   int l; int w;
